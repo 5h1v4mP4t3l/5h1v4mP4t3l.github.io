@@ -1,0 +1,801 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+:root {
+  --one: #00f6ff;
+  --two: #140a39;
+  --three: #f1f1f2;
+  --four: #3187ff;
+}
+
+@-webkit-keyframes wave {
+  0%, 100% {
+    border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
+  }
+  60% {
+    border-radius: 30% 70% 30% 70% / 40% 60% 40% 60%;
+  }
+}
+
+@keyframes wave {
+  0%, 100% {
+    border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
+  }
+  60% {
+    border-radius: 30% 70% 30% 70% / 40% 60% 40% 60%;
+  }
+}
+
+@-webkit-keyframes wave-two {
+  0%, 100% {
+    border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
+  }
+  34% {
+    border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
+  }
+  67% {
+    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+  }
+}
+
+@keyframes wave-two {
+  0%, 100% {
+    border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
+  }
+  34% {
+    border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
+  }
+  67% {
+    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+  }
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slide-in {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+body {
+  margin: 0;
+}
+
+.nav-container {
+  background: var(--one);
+  padding: 1em;
+  position: relative;
+  height: 1.2em;
+  z-index: 800;
+}
+
+.nav-container .nav-links {
+  display: none;
+  font-family: 'Roboto Condensed', sans-serif;
+  background: var(--three);
+  position: fixed;
+  height: 180vh;
+  width: 100%;
+  left: 0%;
+  top: 0%;
+  z-index: 850;
+  -webkit-animation: slide-in 3s 1;
+          animation: slide-in 3s 1;
+}
+
+.nav-container .nav-links .side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  padding: 0;
+}
+
+.nav-container .nav-links .left {
+  margin-top: 18vh;
+}
+
+.nav-container .nav-links img {
+  width: 1.5em;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-60%);
+          transform: translateX(-60%);
+  cursor: pointer;
+}
+
+.nav-container .nav-links a.text {
+  padding-left: .75em;
+  padding: 1em;
+  text-decoration: none;
+  color: var(--four);
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 1.5em;
+}
+
+.nav-container .nav-links a.text:hover {
+  font-weight: 200;
+  -webkit-animation: fade-in 1s;
+          animation: fade-in 1s;
+}
+
+.nav-container .exit {
+  display: none;
+  position: fixed;
+  z-index: 900;
+  right: 1.5%;
+  top: 3%;
+  width: 1.4em;
+  cursor: pointer;
+}
+
+.nav-container .menu {
+  display: block;
+  position: absolute;
+  right: 1.3%;
+  width: 1.4em;
+  cursor: pointer;
+  top: 35%;
+}
+
+.hero {
+  background: var(--two);
+  height: 95vh;
+  overflow: hidden;
+  overflow-y: hidden;
+}
+
+.hero .main-info {
+  position: absolute;
+  left: 8%;
+  top: 16%;
+}
+
+.hero .main-info h1 {
+  font-family: 'Spartan';
+  color: var(--one);
+  font-size: 7.5vw;
+  width: 80vw;
+  margin: .5em 0 .45em 0;
+}
+
+.hero .main-info button {
+  padding: 1em;
+  width: 125px;
+  font-size: 1em;
+  font-family: 'Spartan';
+  font-weight: 700;
+  color: var(--one);
+  margin-right: .75em;
+  cursor: pointer;
+  background-color: var(--two);
+  border: 3px solid var(--one);
+  border-radius: 2em;
+}
+
+.hero .main-info button:hover {
+  background-color: var(--one);
+  color: var(--two);
+  -webkit-animation: fade-in 1s;
+          animation: fade-in 1s;
+}
+
+.hero h3 {
+  color: var(--three);
+  text-align: right;
+  position: absolute;
+  right: 2%;
+  bottom: 0%;
+  padding: 0 .5em 0 .5em;
+  font-size: 4.5vh;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.hero .blob {
+  background: linear-gradient(64deg, var(--one) 43%, var(--four) 70%);
+  -webkit-animation: wave 8s ease-in-out infinite;
+          animation: wave 8s ease-in-out infinite;
+}
+
+.hero .one {
+  position: absolute;
+  left: -5%;
+  top: 65%;
+  width: 40%;
+  height: 50%;
+  z-index: 1;
+}
+
+.hero .two {
+  position: absolute;
+  left: -1%;
+  top: 55%;
+  width: 300px;
+  height: 200px;
+  opacity: 25%;
+}
+
+.hero .three {
+  position: absolute;
+  right: 1%;
+  top: 50%;
+  width: 200px;
+  height: 300px;
+  opacity: 60%;
+}
+
+.hero .four {
+  position: absolute;
+  left: 70%;
+  top: 15%;
+  width: 400px;
+  height: 400px;
+  opacity: 90%;
+}
+
+.hero .five {
+  position: absolute;
+  left: 75%;
+  top: 65%;
+  width: 150px;
+  height: 150px;
+  opacity: 25%;
+}
+
+.hero .six {
+  position: absolute;
+  left: 65%;
+  top: 7%;
+  width: 250px;
+  height: 200px;
+  opacity: 20%;
+}
+
+@media only screen and (max-width: 1150px) {
+  body {
+    overflow-x: hidden;
+  }
+  section.hero .main-info {
+    left: 7%;
+    top: 19vw;
+  }
+  section.hero .main-info h1 {
+    font-size: 8vw;
+  }
+  section.hero .main-info button {
+    font-size: 1.5vw;
+    width: 9em;
+  }
+  section.hero h3 {
+    font-size: 3vw;
+  }
+  section.hero .three {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 925px) {
+  body {
+    overflow-x: hidden;
+  }
+  section.hero {
+    width: 100vw;
+    position: relative;
+  }
+  section.hero .main-info {
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  section.hero .main-info h1 {
+    font-size: 10vw;
+    width: 8em;
+    text-align: center;
+  }
+  section.hero .main-info button {
+    border-color: var(--one);
+    color: var(--one);
+    font-size: 1.75vw;
+  }
+  section.hero .main-info button:hover {
+    background-color: var(--one);
+  }
+  section.hero h3 {
+    text-align: left;
+    font-size: 4vw;
+    left: 1.5%;
+    z-index: 301;
+    width: 10em;
+    color: var(--two);
+    bottom: 1.5%;
+  }
+  section.hero .six {
+    left: 50%;
+    top: -5%;
+  }
+  section.hero .four {
+    top: -20%;
+    opacity: 40%;
+  }
+  section.hero .one {
+    top: 72%;
+    width: 53vw;
+    opacity: 85%;
+  }
+  section.hero .five {
+    left: 76%;
+  }
+  section.hero .two {
+    width: 150px;
+    height: 120px;
+    top: 65%;
+    z-index: 3;
+  }
+}
+
+section.about {
+  height: 110vh;
+  background-color: var(--three);
+  position: relative;
+}
+
+section.about .about-container {
+  margin-left: 6em;
+  margin-right: 6em;
+  padding-top: 34vh;
+  width: 90;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+section.about .about-container .dp {
+  padding-left: 4em;
+  width: 410px;
+  height: 400px;
+  z-index: 1;
+  -webkit-animation: wave-two 8s ease-in-out infinite;
+          animation: wave-two 8s ease-in-out infinite;
+}
+
+section.about .about-container .blob {
+  background: linear-gradient(64deg, var(--one) 43%, var(--four) 70%);
+  -webkit-animation: wave-two 8s ease-in-out infinite;
+          animation: wave-two 8s ease-in-out infinite;
+}
+
+section.about .about-container .seven {
+  position: absolute;
+  left: 20%;
+  top: 25%;
+  width: 200px;
+  height: 200px;
+  opacity: 30%;
+  z-index: 0;
+}
+
+section.about .about-container .eight {
+  position: absolute;
+  left: 2%;
+  top: 40%;
+  width: 250px;
+  height: 250px;
+  opacity: 20%;
+}
+
+section.about .about-container .nine {
+  position: absolute;
+  left: 26%;
+  top: 85%;
+  width: 100px;
+  height: 100px;
+  opacity: 60%;
+  z-index: 2;
+}
+
+section.about .about-container .text {
+  margin-left: 115px;
+  padding-top: 2vw;
+}
+
+section.about .about-container .text h1 {
+  color: var(--four);
+  font-family: 'Spartan';
+  text-transform: uppercase;
+  font-size: 2.3em;
+  margin: 0;
+  padding: 0 0 0.5em 0;
+  font-weight: 750;
+}
+
+section.about .about-container .text .line {
+  content: '';
+  height: 6px;
+  width: 95%;
+  background: var(--four);
+}
+
+section.about .about-container .text h3 {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 500;
+  margin-right: 2.5em;
+  font-size: 1.3vw;
+  width: 95%;
+}
+
+section.skills {
+  height: 1250px;
+  background: var(--two);
+  margin-top: -2em;
+}
+
+section.skills h1 {
+  font-family: 'Spartan';
+  font-size: 2.3em;
+  text-transform: uppercase;
+  color: var(--one);
+  text-align: center;
+  padding-top: 2em;
+  font-weight: 750;
+}
+
+section.skills .skills-container {
+  display: block;
+}
+
+section.skills .skills-container .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: .75em;
+}
+
+section.skills .skills-container .row .skill {
+  display: block;
+  width: 300px;
+  height: 370px;
+  border: 10px solid var(--four);
+  border-radius: 2em;
+  background: #f1f5f5;
+  padding: 2em;
+  margin: 1em;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+section.skills .skills-container .row .skill img {
+  width: 5em;
+}
+
+section.skills .skills-container .row .skill h3 {
+  font-family: 'Spartan';
+  color: var(--four);
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-top: .5em;
+}
+
+section.skills .skills-container .row .skill h5 {
+  font-family: 'Roboto Condensed', sans-serif;
+  padding-top: -.5em;
+  font-size: .9em;
+  font-weight: 350;
+}
+
+section.skills .skills-container .row .skill:hover {
+  -webkit-transform: translateY(-1.25em);
+          transform: translateY(-1.25em);
+}
+
+section.skills .skills-container .row .css img {
+  width: 6.75em;
+  margin-top: -1.5em;
+}
+
+section.skills .skills-container .row .es img {
+  width: 40em;
+  margin-left: -14.5em;
+  padding-bottom: .5em;
+}
+
+section.skills .skills-container .row .cad img {
+  width: 16em;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-33%);
+          transform: translateX(-33%);
+}
+
+section.skills .skills-container .row .cad h3 {
+  margin-top: 5.3em;
+}
+
+section.references {
+  height: 850px;
+  background: var(--three);
+  margin-top: -4em;
+}
+
+section.references h1 {
+  font-family: 'Spartan';
+  font-size: 2.3em;
+  text-transform: uppercase;
+  color: var(--four);
+  text-align: center;
+  padding-top: 2em;
+  font-weight: 750;
+}
+
+section.references .instruction {
+  text-align: center;
+  margin-top: -1em;
+  font-weight: 300;
+}
+
+section.references .references {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  padding: 2em 0 0 0;
+}
+
+section.references .references .reference {
+  position: relative;
+  width: 27vw;
+  height: 53vh;
+  background: linear-gradient(64deg, var(--one) 43%, var(--four) 70%);
+  -webkit-animation: wave-two 12s ease-in-out infinite;
+          animation: wave-two 12s ease-in-out infinite;
+}
+
+section.references .references .reference:hover .info {
+  display: none;
+}
+
+section.references .references .reference:hover .quote {
+  display: block;
+}
+
+section.references .references .reference .info {
+  display: block;
+}
+
+section.references .references .reference .info img {
+  width: 8.5vw;
+  border-radius: 52%;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  top: 15%;
+}
+
+section.references .references .reference .info .bio {
+  display: block;
+  left: 52%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 300px;
+  top: 52%;
+  position: absolute;
+}
+
+section.references .references .reference .info .bio h4 {
+  font-size: 12.5px;
+  font-family: 'Spartan';
+  text-align: center;
+  font-weight: 450;
+}
+
+section.references .references .reference .info .bio h4 span {
+  font-weight: 800;
+}
+
+section.references .references .reference .quote {
+  display: none;
+  position: absolute;
+  left: 52%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-animation: fade-in 3s;
+          animation: fade-in 3s;
+}
+
+section.references .references .reference .quote h5 {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1.3em;
+  font-weight: 400;
+  font-style: italic;
+  text-align: center;
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section.references .references .reference .quote h3 {
+  font-family: 'Spartan';
+  text-align: center;
+  margin-top: -.5em;
+  font-size: 1.3em;
+  font-weight: 700;
+}
+
+section.references .references .one {
+  position: absolute;
+  left: 5%;
+  margin-top: 7em;
+}
+
+section.references .references .two {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+section.references .references .three {
+  position: absolute;
+  right: 5%;
+  margin-top: 7em;
+}
+
+section.contact {
+  height: 830px;
+  margin-top: -.5em;
+  background: var(--two);
+  position: relative;
+}
+
+section.contact h1 {
+  font-family: 'Spartan';
+  font-size: 2.3em;
+  text-transform: uppercase;
+  color: var(--one);
+  text-align: center;
+  padding-top: 2em;
+  font-weight: 750;
+}
+
+section.contact .form-container {
+  width: 60vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section.contact .form-container .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section.contact .form-container .form label {
+  color: var(--one);
+  padding-bottom: .5em;
+  font-family: 'Spartan';
+  font-weight: 500px;
+}
+
+section.contact .form-container .form input {
+  margin-bottom: 2em;
+  padding: 1em;
+  font-family: 'Roboto Condensed', sans-serif;
+  border-radius: 2em;
+  font-size: .9em;
+  outline: none;
+}
+
+section.contact .form-container .form textarea {
+  margin-bottom: 2em;
+  padding: 1em;
+  font-family: 'Roboto Condensed', sans-serif;
+  border-radius: 2em;
+  font-size: .9em;
+  outline: none;
+}
+
+section.contact .form-container .form button {
+  padding: 1em;
+  width: 150px;
+  border-radius: 2em;
+  background-color: var(--two);
+  border: 3px solid var(--one);
+  font-family: 'Spartan';
+  font-weight: 800;
+  color: var(--one);
+  margin-left: auto;
+  margin-right: auto;
+  text-transform: capitalize;
+}
+
+section.contact .form-container .form button:hover {
+  background-color: var(--one);
+  border-color: var(--one);
+  color: var(--two);
+  -webkit-animation: fade-in 1s;
+          animation: fade-in 1s;
+}
+
+footer {
+  background: var(--three);
+  margin-top: -3em;
+  height: 350px;
+}
+
+footer h1 {
+  font-family: 'Spartan';
+  font-weight: 900;
+  padding-top: 4.5em;
+  text-align: center;
+  color: var(--four);
+}
+
+footer h5 {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: var(--two);
+  font-size: 1.2em;
+  text-align: center;
+}
+
+footer h5 a {
+  color: var(--four);
+  cursor: pointer;
+  text-decoration: none;
+}
+/*# sourceMappingURL=main.css.map */
